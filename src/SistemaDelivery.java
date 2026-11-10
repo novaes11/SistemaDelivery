@@ -7,7 +7,32 @@ import relatorios.RelatorioService;
 import repositorios.PedidoRepository;
 import repositorios.PedidoRepositoryImpl;
 
+/**
+ * Ponto de entrada (Main) do Sistema de Delivery.
+ * Demonstra a integração completa de todos os módulos desenvolvidos em conformidade
+ * com os cinco princípios do SOLID:
+ * <ul>
+ *   <li><b>SRP:</b> Separação entre criação, modelo de dados, exibição e persistência do pedido.</li>
+ *   <li><b>OCP:</b> Flexibilidade para plugar novos meios de pagamento sem alterar o código existente.</li>
+ *   <li><b>LSP:</b> Uso transparente e polimórfico das subclasses de {@link Produto} (Pizza, Hambúrguer, Bebida).</li>
+ *   <li><b>ISP:</b> Interfaces específicas e segregadas para pedidos, entregas, relatórios e notificações.</li>
+ *   <li><b>DIP:</b> Desacoplamento através de injeção de dependência via interfaces nos serviços.</li>
+ * </ul>
+ */
 public class SistemaDelivery {
+
+    /**
+     * Construtor privado para evitar instanciação direta da classe executável.
+     */
+    private SistemaDelivery() {
+    }
+
+    /**
+     * Executa a demonstração do sistema, simulando tanto um fluxo de sucesso quanto
+     * a robustez no tratamento de exceções para regras de negócio violadas.
+     *
+     * @param args Argumentos de linha de comando (não utilizados).
+     */
     public static void main(String[] args) {
         System.out.println("========== SISTEMA DE DELIVERY SOLID ==========\n");
 

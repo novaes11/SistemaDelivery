@@ -2,7 +2,24 @@ package relatorios;
 
 import pedidos.Pedido;
 
+/**
+ * Serviço responsável por gerar relatórios financeiros e operacionais dos pedidos.
+ * Implementa {@link GeradorRelatorio}.
+ */
 public class RelatorioService implements GeradorRelatorio {
+
+    /**
+     * Construtor padrão de RelatorioService.
+     */
+    public RelatorioService() {
+    }
+
+    /**
+     * Gera o relatório financeiro e estrutural do pedido fornecido.
+     *
+     * @param pedido O pedido objeto da análise.
+     * @throws IllegalArgumentException se o pedido for nulo.
+     */
     @Override
     public void gerarRelatorio(Pedido pedido) {
         if (pedido == null) {
